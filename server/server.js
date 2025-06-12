@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from 'express';
 import mongoose from "mongoose";
 import bodyParser from 'express';
@@ -60,8 +62,8 @@ app.use('/api/news', newsRouter);
 app.use('/api/gallery', galleryRouter);
 
 mongoose.connect(
-    "mongodb+srv://bishalpangeni90:pUtO1OVN06RSfegF@clusterforbandm.fu5eh.mongodb.net/", {
-    dbName: "Buba_Mummy_Sem"
+    process.env.MONGO_URI, {
+    dbName: process.env.DB_NAME
 }
 ).then(() => console.log("MongoDB connected Successfully")).catch((err) => console.log(err));
 

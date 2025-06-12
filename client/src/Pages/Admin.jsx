@@ -115,7 +115,6 @@ const AdminPage = () => {
                     imageOne: readerOne.result,
                     imageTwo: readerTwo.result
                 });
-                // Handle success (e.g., clear form, show a success message)
                 alert("Successfully Match created");
             } catch (error) {
                 console.error('Error uploading image:', error);

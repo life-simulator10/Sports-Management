@@ -20,7 +20,7 @@ export const addProgram = async (req, res) => {
 };
 
 // Get all programs
-export const getAllPrograms = async (req, res) => {
+export const getAllProgram = async (req, res) => {
     try {
         const programs = await Program.find();
         res.status(200).json(programs);
